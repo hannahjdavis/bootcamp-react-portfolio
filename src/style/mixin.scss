@@ -1,0 +1,38 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-item-test {
+    @include flexbox;
+}
+
+
+.portfolio-item-test-two {
+    @include flexbox;
+    justify-content: flex-start;
+}
+
+@mixin base-btn {
+    cursor: pointer;
+    height: 42px;
+    font-size: 1em;
+    font-weight: 500;
+    border: 1px dotted transparent;
+    transition: all 0.5s ease-in-out;
+    background-color: $teal;
+    color: white;
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: $dark-teal;
+    }
+}
+
+.button-style {
+    @include base-btn;
+}

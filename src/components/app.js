@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import moment from 'moment';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +18,7 @@ import NoMatch from "./pages/no-match";
 export default class App extends Component {
   render() {
     return (
-      <div className='app'>
+      <div className='containers'>
 
         <Router>
           <div>
