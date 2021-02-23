@@ -13,7 +13,7 @@ export default class PortfolioContainer extends Component {
             isLoading: false,
             data: [
             ]
-        };
+        }
 
         this.handleFilter = this.handleFilter.bind(this);
         this.getPortfolioItems = this.getPortfolioItems.bind(this);
@@ -63,14 +63,12 @@ export default class PortfolioContainer extends Component {
         }
 
         return (
-            <div>
-                <h2> {this.state.pageTitle} </h2>
-
-                <button onClick = {() => this.handleFilter ('eCommerce')} >eCommerce</button>;
-                
-                <div className= "portfolio-items-wrapper">{this.portfolioItems()}</div>
-                
-            </div>
+            <div className= "portfolio-items-wrapper">
+                <button className= "btn" onClick = {() => this.handleFilter ('eCommerce')} >eCommerce</button>
+                <button className= "btn" onClick = {() => this.handleFilter ('Enterprise')} >Enterprise</button>
+                <button className= "btn" onClick = {() => this.handleFilter ('Scheduling')} >Scheduling</button>
+                    
+                {this.portfolioItems()}</div>
         );
     }
 }
